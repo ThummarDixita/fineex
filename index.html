@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FINEEX MORTISE - Premium Hardware Solutions</title>
+    <meta name="description" content="Premium hardware solutions crafted with precision. Discover our luxury mortise handles, locks, and hardware products in Rajkot, Gujarat.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'navy': '#1e3a8a',
+                        'navy-dark': '#1e40af',
+                        'gold': '#fbbf24',
+                        'silver': '#e5e7eb'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-[#22283b] shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <img src="/assets/images/logo.png" alt="FINEEX MORTISE" >
+                </div>
+                
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-white hover:text-gold transition-colors font-medium nav-link">Home</a>
+                    <a href="#products" class="text-white hover:text-gold transition-colors font-medium nav-link">Products</a>
+                    <a href="#about" class="text-white hover:text-gold transition-colors font-medium nav-link">About</a>
+                    <a href="#contact" class="text-white hover:text-gold transition-colors font-medium nav-link">Contact</a>
+                </nav>
+
+                <div class="flex items-center space-x-4">
+                    <button class="text-white hover:text-gold transition-colors p-2 rounded-lg hover:bg-white hover:bg-opacity-10" onclick="toggleSearch()" aria-label="Open search" title="Open search">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                    
+                    <button class="relative text-white hover:text-gold transition-colors p-2 rounded-lg hover:bg-white hover:bg-opacity-10" onclick="toggleCart()">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"></path>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <path d="M16 10a4 4 0 01-8 0"></path>
+                        </svg>
+                        <span class="absolute -top-1 -right-1 bg-gradient-to-r from-gold to-yellow-500 text-navy text-xs rounded-full w-6 h-6 flex items-center justify-center font-bold shadow-lg hidden" id="cartCount">0</span>
+                    </button>
+
+                    <button class="md:hidden text-white p-2" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" id="menuIcon">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                        <svg class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" id="closeIcon">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <nav class="md:hidden mt-4 pb-4 border-t border-white border-opacity-20 hidden" id="mobileNav">
+                <div class="flex flex-col space-y-4 pt-4">
+                    <a href="#home" class="text-white hover:text-gold transition-colors text-left nav-link">Home</a>
+                    <a href="#products" class="text-white hover:text-gold transition-colors text-left nav-link">Products</a>
+                    <a href="#about" class="text-white hover:text-gold transition-colors text-left nav-link">About</a>
+                    <a href="#contact" class="text-white hover:text-gold transition-colors text-left nav-link">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-100">
+            <div class="absolute inset-0 opacity-5">
+                <div class="absolute top-10 left-10 w-72 h-72 bg-[#22283b] rounded-full blur-3xl"></div>
+                <div class="absolute bottom-10 right-10 w-96 h-96 bg-gold rounded-full blur-3xl"></div>
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-silver rounded-full blur-3xl"></div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 text-center relative z-10">
+            <h1 class="text-5xl md:text-7xl font-bold mb-8 text-navy leading-tight">
+                <span class="block bg-gradient-to-r from-navy to-navy-dark bg-clip-text text-transparent">
+                    Premium Hardware
+                </span>
+                <span class="block bg-gradient-to-r from-gold to-yellow-500 bg-clip-text text-transparent">
+                    Solutions
+                </span>
+            </h1>
+            <p class="text-2xl md:text-3xl mb-12 text-gray-700 font-light max-w-3xl mx-auto">
+                Crafted with <span class="text-gold font-semibold">precision</span>, designed for <span class="text-navy font-semibold">luxury</span>
+            </p>
+            <div class="flex flex-col md:flex-row justify-center space-y-6 md:space-y-0 md:space-x-8">
+                <button onclick="scrollToSection('products')" class="bg-gradient-to-r from-gold to-yellow-500 text-navy px-12 py-4 rounded-full font-bold text-lg shadow-2xl hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                    <span class="flex items-center justify-center space-x-2">
+                        <span>Explore Products</span>
+                        <span>→</span>
+                    </span>
+                </button>
+                <button onclick="scrollToSection('about')" class="border-2 border-navy text-navy px-12 py-4 rounded-full font-bold text-lg hover:bg-[#22283b] hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl">
+                    Learn More
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Overlay -->
+    <div id="searchOverlay" class="fixed inset-0 bg-black bg-opacity-50 z-60 hidden">
+        <div class="max-w-2xl mx-auto mt-20 px-4">
+            <div class="bg-white rounded-lg shadow-2xl">
+                <div class="p-6">
+                    <div class="flex items-center space-x-4">
+                        <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                        <input type="text" placeholder="Search products..." class="flex-1 text-lg border-none outline-none" id="searchInput">
+                        <button onclick="toggleSearch()" class="text-gray-400 hover:text-gray-600" aria-label="Close search overlay">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <line x1="18" y1="6" x2="6" y2="18"></line>
+                                <line x1="6" y1="6" x2="18" y2="18"></line>
+                            </svg>
+                        </button>
+                    </div>
+                    <div id="searchResults" class="mt-4 max-h-96 overflow-y-auto"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Products Section -->
+    <section id="products" class="py-20 bg-gradient-to-br from-gray-50 via-white to-gray-100 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute top-20 left-10 w-64 h-64 bg-[#22283b] rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 right-10 w-80 h-80 bg-gold rounded-full blur-3xl"></div>
+            <div class="absolute top-1/2 left-1/3 w-48 h-48 bg-silver rounded-full blur-2xl"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-navy mb-4">Our Premium Collection</h2>
+                <p class="text-xl text-gray-600">Discover our range of luxury hardware solutions</p>
+            </div>
+
+            <div class="flex flex-wrap justify-center mb-8 gap-4">
+                <button class="filter-btn bg-[#22283b] text-white px-6 py-2 rounded-full font-medium transition-all duration-300 transform hover:scale-105" data-category="all">All Products</button>
+                <button class="filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full font-medium hover:bg-[#22283b] hover:text-white transition-colors" data-category="handles">Door Handles</button>
+                <button class="filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full font-medium hover:bg-[#22283b] hover:text-white transition-colors" data-category="locks">Security Locks</button>
+                <button class="filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full font-medium hover:bg-[#22283b] hover:text-white transition-colors" data-category="hinges">Premium Hinges</button>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="productsGrid">
+                <!-- Products will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold text-navy mb-6">About FINEEX MORTISE</h2>
+                    <p class="text-lg text-gray-700 mb-6">
+                        For years, we have been crafting premium hardware solutions that combine traditional 
+                        craftsmanship with modern innovation. Our commitment to quality and luxury has made us 
+                        a trusted name in the industry.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-6">
+                        Every product in our collection is designed with precision and built to last, ensuring 
+                        that your investment in quality hardware pays dividends for years to come.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-navy mb-2">500+</div>
+                            <div class="text-gray-600">Premium Products</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-navy mb-2">1000+</div>
+                            <div class="text-gray-600">Happy Customers</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:pl-8">
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=500" alt="Hardware manufacturing workshop" class="w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-[#22283b]  text-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">Get In Touch</h2>
+                <p class="text-xl text-silver">Contact us for premium hardware solutions</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <svg class="text-gold text-xl mt-1 flex-shrink-0 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <div>
+                                <div class="font-semibold text-white">Address:</div>
+                                <div class="text-silver leading-relaxed">
+                                    Jeet Industrial Street: 1<br>
+                                    SWATI PARK 80 FEET ROAD<br>
+                                    Jeet Industrial Aria Swati Park<br>
+                                    Rajkot, Gujarat 360002<br>
+                                    India
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-4">
+                            <svg class="text-gold text-xl flex-shrink-0 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"></path>
+                            </svg>
+                            <div>
+                                <div class="font-semibold">Phone:</div>
+                                <div class="text-silver">+91 7878585884</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-4">
+                            <svg class="text-gold text-xl flex-shrink-0 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <div>
+                                <div class="font-semibold">Email:</div>
+                                <div class="text-silver">info@fineexmortise.com</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="bg-[#22283b] border border-silver rounded-lg p-6">
+                        <h3 class="text-2xl font-semibold mb-6 text-white">Send Message</h3>
+                        <form onsubmit="handleContactForm(event)" class="space-y-4">
+                            <input type="text" name="name" placeholder="Your Name" required class="w-full bg-[#22283b] text-white border border-silver focus:border-gold p-3 rounded-lg focus:outline-none transition-colors">
+                            <input type="email" name="email" placeholder="Your Email" required class="w-full bg-[#22283b] text-white border border-silver focus:border-gold p-3 rounded-lg focus:outline-none transition-colors">
+                            <textarea name="message" placeholder="Your Message" rows="4" required class="w-full bg-[#22283b] text-white border border-silver focus:border-gold p-3 rounded-lg focus:outline-none resize-none transition-colors"></textarea>
+                            <button type="submit" class="w-full bg-gold text-navy px-8 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition-colors">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#22283b] text-white py-8">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="text-silver text-sm text-center md:text-left mb-4 md:mb-0">
+                    © 2024 FINEEX MORTISE. All rights reserved. | Premium Hardware Solutions
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-silver hover:text-gold transition-colors duration-200">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-silver hover:text-gold transition-colors duration-200">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-silver hover:text-gold transition-colors duration-200">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div id="cartSidebar" class="fixed inset-0 z-60 hidden">
+        <div class="absolute inset-0 bg-black bg-opacity-50" onclick="toggleCart()"></div>
+        <div class="absolute top-0 right-0 h-full w-80 bg-white shadow-2xl flex flex-col transform translate-x-full transition-transform duration-300" id="cartContent">
+            <div class="p-6 border-b border-gray-200 flex items-center justify-between">
+                <h3 class="text-xl font-semibold text-navy">Shopping Cart</h3>
+                <button onclick="toggleCart()" class="p-2 hover:bg-gray-100 rounded-lg transition-colors" aria-label="Close cart sidebar">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="flex-1 overflow-y-auto p-6" id="cartItems">
+                <div class="text-center py-12">
+                    <svg class="w-16 h-16 text-gray-300 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 01-8 0"></path>
+                    </svg>
+                    <p class="text-gray-500 text-lg">Your cart is empty</p>
+                    <p class="text-gray-400 text-sm mt-2">Add some products to get started</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-200 p-6 hidden" id="cartFooter">
+                <div class="flex items-center justify-between mb-4">
+                    <span class="text-lg font-semibold">Total:</span>
+                    <span class="text-2xl font-bold text-navy">₹<span id="cartTotal">0</span></span>
+                </div>
+                <div class="space-y-2">
+                    <button class="w-full bg-[#22283b] text-white py-3 rounded-lg font-semibold hover:bg-[#22283b]transition-colors">Proceed to Checkout</button>
+                    <button onclick="clearCart()" class="w-full border border-gray-300 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors">Clear Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Cart Button -->
+    <div id="floatingCart" class="fixed bottom-6 right-6 z-40 bg-gradient-to-r from-navy to-navy-dark text-white px-6 py-4 rounded-full shadow-2xl cursor-pointer transition-all duration-300 hover:shadow-3xl hover:scale-105 hidden" onclick="toggleCart()">
+        <div class="flex items-center space-x-3">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"></path>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <path d="M16 10a4 4 0 01-8 0"></path>
+            </svg>
+            <span class="font-bold">View Cart</span>
+            <div class="bg-gold text-navy rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold" id="floatingCartCount">0</div>
+        </div>
+    </div>
+
+    <script src="/assets/js/script.js"></script>
+</body>
+</html>
