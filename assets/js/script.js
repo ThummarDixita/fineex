@@ -5,7 +5,7 @@ const products = [
         name: "Luxury Mortise Handle Set",
         description: "Premium brass mortise handle with elegant design and superior finish.",
         price: "2500",
-        image: "/assets/images/p1.jpeg",
+        image: "./assets/images/p1.jpeg",
         category: "handles",
         tags: ["luxury", "brass", "premium", "handle", "mortise"]
     },
@@ -14,7 +14,7 @@ const products = [
         name: "Security Mortise Lock",
         description: "Heavy-duty mortise lock with advanced security features and durable construction.",
         price: "4200",
-        image: "/assets/images/p2.jpeg",
+        image: "./assets/images/p2.jpeg",
         category: "locks",
         tags: ["security", "lock", "heavy-duty", "mortise", "advanced"]
     },
@@ -23,7 +23,7 @@ const products = [
         name: "Premium Door Handle",
         description: "Elegant door handle with smooth operation and premium finish.",
         price: "1800",
-        image: "/assets/images/p3.jpeg",
+        image: "./assets/images/p3.jpeg",
         category: "handles",
         tags: ["premium", "door", "handle", "elegant", "smooth"]
     },
@@ -32,7 +32,7 @@ const products = [
         name: "Designer Mortise Set",
         description: "Contemporary design mortise set perfect for modern interiors.",
         price: "3500",
-        image: "/assets/images/p4.jpeg",
+        image: "./assets/images/p4.jpeg",
         category: "handles",
         tags: ["designer", "contemporary", "modern", "mortise", "interior"]
     },
@@ -41,7 +41,7 @@ const products = [
         name: "Heavy Duty Lock",
         description: "Industrial grade mortise lock for maximum security and durability.",
         price: "5200",
-        image: "/assets/images/p5.jpeg ",
+        image: "./assets/images/p5.jpeg ",
         category: "locks",
         tags: ["heavy-duty", "industrial", "security", "durable", "mortise"]
     },
@@ -50,7 +50,7 @@ const products = [
         name: "Brass Door Hardware",
         description: "Traditional brass hardware set with intricate detailing and lasting quality.",
         price: "2800",
-        image: "/assets/images/p6.jpeg",
+        image: "./assets/images/p6.jpeg",
         category: "handles",
         tags: ["brass", "traditional", "hardware", "detailed", "quality"]
     },
@@ -59,7 +59,7 @@ const products = [
         name: "Premium Hinge Set",
         description: "Heavy-duty brass hinges with smooth operation and rust resistance.",
         price: "1200",
-        image: "/assets/images/p7.jpeg",
+        image: "./assets/images/p7.jpeg",
         category: "hinges",
         tags: ["premium", "hinge", "brass", "heavy-duty", "rust-resistant"]
     },
@@ -68,7 +68,7 @@ const products = [
         name: "Luxury Lock Cylinder",
         description: "High-security lock cylinder with precision engineering and smooth operation.",
         price: "3800",
-        image: "/assets/images/p8.jpeg",
+        image: "./assets/images/p8.jpeg",
         category: "locks",
         tags: ["luxury", "cylinder", "security", "precision", "engineering"]
     },
@@ -77,7 +77,7 @@ const products = [
         name: "Designer Handle Collection",
         description: "Exclusive designer handle with unique styling and premium materials.",
         price: "4500",
-        image: "/assets/images/p9.jpeg",
+        image: "./assets/images/p9.jpeg",
         category: "handles",
         tags: ["designer", "exclusive", "unique", "premium", "collection"]
     },
@@ -86,7 +86,7 @@ const products = [
         name: "Professional Grade Lock",
         description: "Commercial grade mortise lock suitable for high-traffic areas.",
         price: "6200",
-        image: "/assets/images/p10.jpeg",
+        image: "./assets/images/p10.jpeg",
         category: "locks",
         tags: ["professional", "commercial", "high-traffic", "grade", "mortise"]
     },
@@ -95,7 +95,7 @@ const products = [
         name: "Decorative Hardware Set",
         description: "Ornate hardware set with artistic design and premium finish.",
         price: "3200",
-        image: "/assets/images/p11.jpeg",
+        image: "./assets/images/p11.jpeg",
         category: "handles",
         tags: ["decorative", "ornate", "artistic", "premium", "hardware"]
     },
@@ -104,7 +104,7 @@ const products = [
         name: "Heavy Duty Hinges",
         description: "Industrial strength hinges designed for heavy doors and frequent use.",
         price: "1800",
-        image: "/assets/images/p12.jpeg",
+        image: "./assets/images/p12.jpeg",
         category: "hinges",
         tags: ["heavy-duty", "industrial", "hinges", "doors", "frequent-use"]
     }
